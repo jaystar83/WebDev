@@ -1,0 +1,37 @@
+<fulfillmentToken fulfillmentType="buy" auth="user" xmlns="http://ns.adobe.com/adept">
+  <distributor>urn:uuid:06707e6a-f172-4b12-9772-4a0601d656c2</distributor>
+  <operatorURL>https://acs6.onleihe.de/fulfillment</operatorURL>
+  <transaction>250890601-29385417138223213-Fri Feb 10 22:26:35 CET 2023</transaction>
+  <purchase>2023-02-10T22:26:35+01:00</purchase>
+  <expiration>2023-03-03T22:26:35+01:00</expiration>
+  <resourceItemInfo>
+    <resource>urn:uuid:d7ca32ab-ab9c-453e-92d9-6f235ba6b75d</resource>
+    <resourceItem>0</resourceItem>
+    <metadata>
+      <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Progressive Web Apps</dc:title>
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Liebel</dc:creator>
+      <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Rheinwerk Verlag</dc:publisher>
+      <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">978-3-8362-6495-2</dc:identifier>
+      <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">application/epub+zip</dc:format>
+      <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">de</dc:language>
+    </metadata>
+    <licenseToken>
+      <resource>urn:uuid:d7ca32ab-ab9c-453e-92d9-6f235ba6b75d</resource>
+      <permissions>
+        <display>
+          <until>2023-03-04T00:00:00+01:00</until>
+        </display>
+        <excerpt>
+          <until>2023-03-04T00:00:00+01:00</until>
+        </excerpt>
+        <print>
+          <until>2023-03-04T00:00:00+01:00</until>
+        </print>
+        <play>
+          <until>2023-03-04T00:00:00+01:00</until>
+        </play>
+      </permissions>
+    </licenseToken>
+  </resourceItemInfo>
+  <hmac>m1IEx5/h/80EugeNO8Ozc/Ar+jo=</hmac>
+</fulfillmentToken>
