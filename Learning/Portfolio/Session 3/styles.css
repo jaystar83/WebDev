@@ -1,0 +1,38 @@
+.qoute
+{
+    font-style: italic;
+}
+
+.grid-table
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+.container
+{
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.intro
+{
+    text-align: center;
+}
+
+.about-grid
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+.i-am, .i-like
+{
+    text-align: center;
+    text-decoration: none;
+}
+.about-list, .like-list
+{
+    
+}

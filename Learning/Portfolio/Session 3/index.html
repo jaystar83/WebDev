@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 3 - CSS</title>
+
+    <!-- reference to css style sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+    <!-- "div contsiner" for all our content -->
+
+        <div class="intro">
+        <!-- div: Intro -->
+            <img src="media/150x150_dummy.png" />
+            <h1>Jhon Doe</h1>
+            <h3>Web Developer in Ausbildung</h3>
+            <p class="qoute">
+                {{ Pause and ponder }}
+            </p> 
+        <!-- END div: Intro -->
+        </div>
+
+        <div class="about-grid">
+        <!-- div: About -->
+            <div class="i-am">
+                <h3>I am</h3>
+                <ul class="about-list">
+                    <li>An engineer</li>
+                    <li>A developer</li>
+                    <li>A father</li>
+                </ul>
+            </div>
+            <div class="i-like">
+                <h3>I like</h3>
+                <ul class="like-list">
+                    <li>Martial arts</li>
+                    <li>Robots</li>
+                    <li>...</li>
+                </ul>
+            </div>
+        <!-- END div: About -->
+        </div>
+    
+        <div>
+        <!-- div: Portfolio -->
+            <h3>My Projects</h3>
+            <img src="media/300x300_dummy.png" />
+            <img src="media/300x300_dummy.png" />
+            <img src="media/300x300_dummy.png" />
+            <img src="media/300x300_dummy.png" />
+        <!-- END div: Portfolio -->
+        </div>
+
+        <div>
+        <!-- div: Footer -->
+            <div>
+                <h3>Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://github.com/jaystar83">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/<user>">Twitter</a>
+                    </li>
+            </div>
+
+            <div>
+                <form action="#">
+                    <label for="email">
+                        Email: <input type="email" id="email" placeholder="Enter your email" />
+                    </label>
+                    <label for="message">
+                        Message: <textarea id="message">Your Message</textarea>
+                    </label>
+                    <input type="submit" valid="Send Message" />
+                </form>
+            </div>
+
+        <!-- END div: Footer -->
+        </div>
+
+    <!-- END: div class="container" -->
+    </div>
+</body>
+</html>
