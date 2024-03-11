@@ -34,5 +34,6 @@
 }
 .about-list, .like-list
 {
-    
+	list-style: none;
+	padding: 0;
 }
