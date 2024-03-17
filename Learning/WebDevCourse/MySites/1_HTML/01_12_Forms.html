@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+		<meta charset="utf-8" /> 		<!-- Unterstützung für Umlaute usw. -->
+		<title>01_12_Forms</title>
+	</head>
+	
+	<body>
+		<img src="Bilder/Garma.png" width="200"/>
+		<p>Lord Garmadon</p>
+
+		<p>Benutzername <input type="text" placeholder="Dein Benutzername"> </p>
+		<p>Alternative mit vorgegebenene Wert <input type="text" value="Dein Benutzername"> </p>
+		<p>Eingeloggt bleiben? <input type="checkbox" checked> </p>
+
+		<!-- Gleicher Name, dadurch gehöreb die Radio-Buttons zusammen und es kann nur ein Wert ausgewählt werden -->
+		<p>Unter 18: <input type="radio" name="age" value="u18"> </p>
+		<p>Über 18: <input type="radio" name="age" value="o18"> </p>
+	
+		<p>Lieblingsessen: 
+			<select>
+				<option>Pizza</option>
+				<option selected>Pasta</option>
+				<option>Pommes</option>
+			</select>
+		</p>
+		
+		<p> <input type="submit"/>
+		<p> Alternativer Button<input type="submit" value="Klickmich"/> </p>
+		
+
+	</body>
+</html>
