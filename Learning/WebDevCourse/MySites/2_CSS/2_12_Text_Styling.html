@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Learning CSS - 2_12_Fonts_Styling </title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Meine Webseite</title>
+        
+
+   <style type="text/css">
+
+		.arial_font{
+			font-family: Arial, Helvecita, sans-serif;
+		}
+		
+		.bold {
+			font-weight: bold;
+		}
+		
+		.italic {
+			font-style: italic;
+		}
+
+		.underlined {
+			text-decoration: underline;
+		}
+		
+		.link_no_underline {
+			text-decoration: none;
+		}
+		
+		.link_no_underline_hover {
+			text-decoration: none;
+		}
+		
+		.link_no_underline_hover:hover {
+			text-decoration: underline;
+			color: green;
+		}
+
+		.big {
+			font-size: 200%;
+		}	
+		
+    </style>
+
+</head>
+
+<body>
+	<p class="arial_font">Dies ist etwas Text!</p>
+
+	<p class="bold">Dies ist etwas fetter Text!</p>
+
+	<p class="italic">Dies ist etwas kursiver Text! <span class="bold">Und das ist kursiver fetter Text!</span></p>
+
+	<p class="underlined">Dies ist etwas unterstrichener Text!</p>
+
+	<p> <a class="link_no_underline" href="">Dieser Link ist nicht unterstrichen! </a> </p>
+
+	<p> <a class="link_no_underline_hover" href="">Dieser Link ist nicht unterstrichen aber ändert sich wenn die Maus drüber fährt! </a> </p>
+	
+	<p class="big">Dies ist riesiger Text!</p>
+
+	<p> <a href="https://fonts.google.com/"> https://fonts.google.com/ </a> </p>
+</body>
+</html>

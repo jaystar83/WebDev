@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Learning CSS - 2_15_Tagesschau </title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Meine Webseite</title>
+        
+
+	<style type="text/css">
+	
+		#Topleiste{
+			background-color: #42587E;
+			width: 100%;
+			float: left;
+		}
+		
+		/* Ansprechen der Listenelemente der Topleiste */
+		#Topleiste li{
+			list-style: none;
+			float: left;
+		}
+		
+		/* a:link sollte eigentlich fuer alle Links einer a-Ref funktioneren */
+		#TL-Link {
+			color: white;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 10px 5px 1px 5px;
+		}
+
+		#TL-Link:hover{
+			color: black;
+			background-color: white;
+			text-decoration: none;
+		}
+
+		a:link {
+			color: yellow;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 10px 5px 1px 5px;
+		}
+		
+		a:hover{
+			color: blue;
+			background-color: white;
+			text-decoration: none;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<div id="Topleiste">
+		<ul>
+			<li><a id="TL-Link" href="www.ARD-Home.de">ARD Home</a></li>
+			<li><a id="TL-Link" href="www.Nachrichten.de">Nachrichten</a></li>
+			<li><a id="TL-Link" href="www.Sport.de">Sport</a></li>
+			<li><a id="TL-Link" href="www.Boerse.de">Börse</a></li>
+			<li><a id="TL-Link" href="www.Ratgeber.de">Ratgeber</a></li>
+			<li><a id="TL-Link" href="www.Wissen.de">Wissen</a></li>
+			<li><a href="www.Kultur.de">Kultur</a></li>
+			<li><a href="www.Kinder.de">Kinder</a></li>
+			<li><a href="www.Intern.de">ARD Intern</a></li>
+			<li> </li>
+			<li><a href="www.Fernsehen.de"> <b>Fernsehen</b> </a></li>
+			<li><a href="www.Radio.de"> <b>Radio</b> </a></li>
+			<li><a id="TL-Link" href="www.ARD-Mediathke.de"> <b>ARD Mediathek</b> </a></li>
+			<li> <img src="images/ardLogo.png" width=60px/></li>
+		</ul>
+	
+	
+	</div>
+	
+</body>
+</html>
