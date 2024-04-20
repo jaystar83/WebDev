@@ -14,6 +14,8 @@
 		
 		body{
 			background-image: url(images/background.JPG);
+			// background-size: cover;
+			background-size: 150%;
 		}
 		
 		.centeredContextBlock{
@@ -72,9 +74,73 @@
 		#searchField{
 			float: right;
 			position: relative;
-			top: -25px;
-			left: -20px;
+			top: -22px;
+			/*left: -20px; */ 
 		}
+
+		#searchField input{
+			height: 20px;
+			background-image: url(images/searchIcon.png);
+			background-position: right;
+			background-size: 20px;
+			background-repeat: no-repeat;
+
+		}
+
+		#blueStripe_News{
+			position: relative;
+			top: 25px;
+			background-color: rgb(0, 132, 255);
+			height: 30px;
+			border: 5px white solid;  			
+		}
+
+		#blueStripe_Content{
+			position: relative;
+			top: 25px;
+			background-color: #42587E;
+			height: 30px;
+			border: 5px white solid;  			
+		}
+
+		#stripeText{
+			font-family: Arial, Helvecita, sans-serif;
+			font-weight: bold;
+			color: white;
+			position: relative;
+			top: -10px;
+		}
+	
+		#newsBlock{
+			position: relative;
+			top: 20px;
+			background-color: white;
+			border: 5px white solid;
+			font-family: Arial, Helvecita, sans-serif;  			
+		}
+
+		#newsBlock img{
+			float: left;
+			margin-right: 10px;
+		}
+
+		#contentLink{
+			color: black;
+			text-decoration: none;
+			font-size: 16px;
+		
+		}
+		#contentLink:hover{
+			color: black;
+			text-decoration: none;
+			background-color: darkgrey;
+			background-size: 100px;
+		}
+/*
+		hr{
+			margin: 5px;
+		}
+*/
 
 	</style>
 
@@ -100,7 +166,7 @@
 			<li><a href="www.Radio.de"> <b>Radio</b> </a></li>
 			<li><a id="TL-Link" href="www.ARD-Mediathke.de"> <b>ARD Mediathek</b> </a></li>
 
-			<li> <img src="images/ardLogo.png" width=60px/></li>
+			<li> <span style="padding:10px;"/> <img src="images/ardLogo.png" width=60px/></li>
 		</ul>
 	
 	</div>
@@ -115,6 +181,57 @@
 			<input type="text" placeholder="Suche"> </p>
 		</div>
 	
+		<div id="blueStripe_News">
+			<p id="stripeText"> <span style="padding:10px;"/> NACHRICHTEN </p>
+		</div>
+		<div id="newsBlock">
+			<img id="newsBlockPic" src="images/schnee-in-bayern-100.webp" width=100%/>
+			<p>Schnee im April</p>
+			<h2>"Der Winter gibt ein spätes Gastspiel"</h2>
+			<p> <b>Flockenwirbel statt Frühlingsgefühle: Ein Tief bringt laut dem Deutschen Wetterdienst in der Nacht in mehreren Regionen Deutschlands Schnee. Ein Wetterumschwung ist noch nicht in Sicht.</b> </p>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/60-jahre-nutella-100.html">Milliardengeschäft Nutella - Das "Nüsschen" wird 60</a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/vw-tennessee-gewerkschaft-100.html"> Bundesstaat Tennessee - VW-Arbeiter in USA organisieren sich gewerkschaftlich </a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-kursrutsch-iran-israel-gold-sicherer-hafen-dow-nikkei-oel-akien-boerse-100.html">Trotz leichter Entspannung in Nahost - Zinsängste machen der Nasdaq zu schaffen </a>
+			<hr>
+		</div>
+
+		<div id="blueStripe_Content">
+			<p id="stripeText"> <span style="padding:10px;"/> WIRTSCHAFT </p>
+		</div>
+		<div id="newsBlock">
+			<img  id="#newsBlockPic" src="images/simbabwe-waehrung-100.webp" width=50%/>
+			<p> Aus Dollar wird "Simbabwe Gold"</p>
+			<h2>Währungsreform in Simbabwe mit Sorge erwartet</h2>
+			<p> <b>Inflation, Wirtschaftsflaute, Schwarzmarkt: Simbabwe hat viele Probleme. Jetzt soll eine Währungsreform für Ruhe sorgen. Doch viele Menschen bezweifeln, dass das funktionieren wird. </b> </p>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/60-jahre-nutella-100.html">Milliardengeschäft Nutella - Das "Nüsschen" wird 60</a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/vw-tennessee-gewerkschaft-100.html"> Bundesstaat Tennessee - VW-Arbeiter in USA organisieren sich gewerkschaftlich </a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-kursrutsch-iran-israel-gold-sicherer-hafen-dow-nikkei-oel-akien-boerse-100.html">Trotz leichter Entspannung in Nahost - Zinsängste machen der Nasdaq zu schaffen </a>
+			<hr>
+		</div>
+
+		<div id="blueStripe_Content">
+			<p id="stripeText"> <span style="padding:10px;"/> WETTER </p>
+		</div>
+		<div id="newsBlock">
+			<img id="#newsBlockPic" src="images/wetter.webp" width=50%/>
+			<p> Wettervorhersage Deutschland </p>
+			<h2>Wolken, Temperaturen, Wind und Aussichten</h2>
+			<p> <b>Am Samstag wechselhaft mit vielen Wolken und wiederholt Schauern. Örtlich kurze Gewitter. Im Nordosten längere freundliche Phasen. 2°C im Erzgebirge, bis 11°C im Nordwesten. </b> </p>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/60-jahre-nutella-100.html">Milliardengeschäft Nutella - Das "Nüsschen" wird 60</a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/unternehmen/vw-tennessee-gewerkschaft-100.html"> Bundesstaat Tennessee - VW-Arbeiter in USA organisieren sich gewerkschaftlich </a>
+			<hr>
+			<a id="contentLink" href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-kursrutsch-iran-israel-gold-sicherer-hafen-dow-nikkei-oel-akien-boerse-100.html">Trotz leichter Entspannung in Nahost - Zinsängste machen der Nasdaq zu schaffen </a>
+			<hr>
+		</div>
+		
 	</div>
 	
 	
