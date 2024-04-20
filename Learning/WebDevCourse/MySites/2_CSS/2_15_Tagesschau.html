@@ -11,7 +11,16 @@
         
 
 	<style type="text/css">
-	
+		
+		body{
+			background-image: url(images/background.JPG);
+		}
+		
+		.centeredContextBlock{
+			width: 900px;
+			margin: auto;
+		}
+		
 		#Topleiste{
 			background-color: #42587E;
 			width: 100%;
@@ -50,6 +59,22 @@
 			background-color: white;
 			text-decoration: none;
 		}
+		
+		#ardPic{
+			content: url(images/ardLogo_2.jpg);
+			width: 70px;
+			position: relative;
+			top: 10px;
+			border-radius: 5px;
+			
+		}
+		
+		#searchField{
+			float: right;
+			position: relative;
+			top: -25px;
+			left: -20px;
+		}
 
 	</style>
 
@@ -68,15 +93,31 @@
 			<li><a href="www.Kultur.de">Kultur</a></li>
 			<li><a href="www.Kinder.de">Kinder</a></li>
 			<li><a href="www.Intern.de">ARD Intern</a></li>
-			<li> </li>
+
+			<li> <span style="padding:30px;"/> </li>
+
 			<li><a href="www.Fernsehen.de"> <b>Fernsehen</b> </a></li>
 			<li><a href="www.Radio.de"> <b>Radio</b> </a></li>
 			<li><a id="TL-Link" href="www.ARD-Mediathke.de"> <b>ARD Mediathek</b> </a></li>
+
 			<li> <img src="images/ardLogo.png" width=60px/></li>
 		</ul>
 	
+	</div>
+	
+	<div class="centeredContextBlock">
+	
+		<div id="ardPic">
+		
+		</div>
+	
+		<div id="searchField">
+			<input type="text" placeholder="Suche"> </p>
+		</div>
 	
 	</div>
+	
+	
 	
 </body>
 </html>
