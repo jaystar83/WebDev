@@ -1,14 +1,17 @@
-<style type="text/css">
-	
+/*<style type="text/css">*/
+
+/* Das body-Styling funktioniert nicht in externalCSS! -> Keine Ahnung warum nicht
+	Lösung: <style type... > muss entfernt werden in css
+*/
 	body{
-		background-image: url("images/background.JPG");
-		// background-size: cover; 
+		background-image:url("images/background.JPG");
 		background-size: 150%;
 	}
 	
-	.centeredContextBlock{
+	#centeredContextBlock{
 		width: 900px;
-		margin: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	
 	#Topleiste{
@@ -218,4 +221,4 @@
 	}
 */
 
-</style>
+/*</style>*/

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_05 Webseiteninhalt Verändern</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+</head>
+
+<body>
+	
+		<p id="text">Hello Wordl!</p>
+
+		<button id="myButton">Text ändern!</button>
+
+		<p id="zweiterParagraph">Javascript ist ...</p>
+
+		<button id="zweiterButton">Text ändern!</button>
+
+		<p id="dritterParagraph">Hello World</p>
+
+		<button id="dritterButton">Text ändern!</button>
+
+		<p id="vierterParagraph">Nur Text</p>
+
+		<button id="vierterButton">Text ändern!</button>
+
+		<p id="_5terParagraph">Javascript ist ...</p>
+
+		<button id="_5terButton">Text ändern!</button>
+
+		<script type="text/javascript">
+
+			document.getElementById("myButton").onclick = function() {
+				document.getElementById("text").innerHTML = "Text wurde geändert!";
+			}
+
+			document.getElementById("zweiterButton").onclick = function() {
+				document.getElementById("zweiterParagraph").innerHTML = "Ich finde: " + document.getElementById("zweiterParagraph").innerHTML + " super!";
+			}
+
+			document.getElementById("dritterButton").onclick = function() {
+				document.getElementById("dritterParagraph").innerHTML = "<h1>" + document.getElementById("dritterParagraph").innerHTML + "</h1>";
+			}
+
+			document.getElementById("vierterButton").onclick = function() {
+				document.getElementById("vierterParagraph").innerHTML = "<button id='neuerButton_1'>Jetzt ein Button</button>";
+			}
+
+			document.getElementById("_5terButton").onclick = function() {
+				document.getElementById("_5terParagraph").innerHTML = "Ich finde: " + document.getElementById("_5terParagraph").innerHTML + " super!" + "<button id='neuerButton_2'> + ein Button</button>";
+			}
+
+
+	</script>
+
+</body>

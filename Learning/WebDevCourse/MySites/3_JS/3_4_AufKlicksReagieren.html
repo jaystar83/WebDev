@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Learning JS - 3_01 JS Einleitung</title>
+	<title>JS - 3_4 Auf Klicks reagieren</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,11 +12,17 @@
 </head>
 
 <body>
-	<!--- Buton mit Inline JavaScript --->
-	<button onclick="alert('Hallo Welt!')">Klick mich!</button>
+	
+	<p id="text">Hello Wordl!</p>
 
-	<!--- Internal CSS --->
+	<button id="myButton">Text ändern!</button>
+
 	<script type="text/javascript">
-		alert("Seite wurde geladen!");
+
+		document.getElementById("myButton").onclick = function() {
+			document.getElementById("text").innerHTML = "Text wurde geändert!";
+		}
+
 	</script>
+
 </body>
