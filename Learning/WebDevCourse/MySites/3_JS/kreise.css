@@ -1,0 +1,19 @@
+.kreis{
+	width:130px;
+	height:130px;
+	border-radius:50%;
+	float:left;
+	margin-left:10px;
+}
+
+#kreis-rot{
+	background-color:red;
+}
+
+#kreis-blau{
+	background-color:blue;
+}
+
+#kreis-gelb{
+	background-color: yellow;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_05 Webseiteninhalt Verändern</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	
+</head>
+
+<body>
+	
+		
+		<button id="styleText">Style den Text!</button>
+
+		<p id="_textToStyle">Dieser Text bekommt einen neuen Style!</p>
+
+		<button id="hideText">Verstecke den Text!</button>
+
+		<button id="showText">Zeige den Text!</button>
+
+		<script type="text/javascript">
+
+			document.getElementById("styleText").onclick = function() {
+				document.getElementById("_textToStyle").style.color = "red";
+				document.getElementById("_textToStyle").style.fontSize = "50px";
+				
+			}
+
+			document.getElementById("hideText").onclick = function() {
+				document.getElementById("_textToStyle").style.display = "none";
+			}
+
+			document.getElementById("showText").onclick = function() {
+				document.getElementById("_textToStyle").style.display = "block";
+			}
+			
+		</script>
+
+</body>
