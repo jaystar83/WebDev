@@ -10,33 +10,32 @@
 	
 </head>
 
-<body>
+<body>	
 	
-		
-		<button id="styleText">Style den Text!</button>
+	<button id="styleText">Style den Text!</button>
 
-		<p id="_textToStyle">Dieser Text bekommt einen neuen Style!</p>
+	<p id="_textToStyle">Dieser Text bekommt einen neuen Style!</p>
 
-		<button id="hideText">Verstecke den Text!</button>
+	<button id="hideText">Verstecke den Text!</button>
 
-		<button id="showText">Zeige den Text!</button>
+	<button id="showText">Zeige den Text!</button>
 
-		<script type="text/javascript">
+	<script type="text/javascript">
 
-			document.getElementById("styleText").onclick = function() {
-				document.getElementById("_textToStyle").style.color = "red";
-				document.getElementById("_textToStyle").style.fontSize = "50px";
-				
-			}
-
-			document.getElementById("hideText").onclick = function() {
-				document.getElementById("_textToStyle").style.display = "none";
-			}
-
-			document.getElementById("showText").onclick = function() {
-				document.getElementById("_textToStyle").style.display = "block";
-			}
+		document.getElementById("styleText").onclick = function() {
+			document.getElementById("_textToStyle").style.color = "red";
+			document.getElementById("_textToStyle").style.fontSize = "50px";
 			
-		</script>
+		}
+
+		document.getElementById("hideText").onclick = function() {
+			document.getElementById("_textToStyle").style.display = "none";
+		}
+
+		document.getElementById("showText").onclick = function() {
+			document.getElementById("_textToStyle").style.display = "block";
+		}
+		
+	</script>
 
 </body>
