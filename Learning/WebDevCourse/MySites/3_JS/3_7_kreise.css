@@ -17,3 +17,7 @@
 #kreis-gelb{
 	background-color: yellow;
 }
+
+.clear-float {
+    clear: both;
+}
