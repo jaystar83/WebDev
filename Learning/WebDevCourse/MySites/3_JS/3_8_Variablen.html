@@ -11,9 +11,17 @@
 </head>
 
 <body>
+	<p id="textToChange">Dieser Text kann geändert werden</p>
 
+	<input type="text" id="newText" placeholder="Neuer Text"> </p>
+
+	<button id="textChangeButton">Click to change text</button>
 
 	<script type="text/javascript">
+		document.getElementById("textChangeButton").onclick = function() {
+			var newEnteredText = document.getElementById("newText").value;
+			document.getElementById("textToChange").innerHTML = newEnteredText;
+		}
 
 	</script>
 
