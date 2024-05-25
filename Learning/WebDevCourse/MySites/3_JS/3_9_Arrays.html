@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_09 Arrays</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+	<input type="text" id="inputText">
+
+	<button id="tweetButton">Tweet Button!</button>
+
+	<script type="text/javascript">
+
+		alert("Bitte öffne die Konsole (F12)");
+
+		var myArray = new Array();
+
+		myArray[0] = "pizza";
+		myArray[1] = "Schokolade";
+
+		console.log(myArray);
+		console.log(myArray[0]);
+
+		var tweets = ["Guten Morgen!", "Ich liebe Kaffee", "Ich muss jetzt los :-("];
+		tweets.push("Jetzt bin ich da :-)");
+
+		console.log(tweets);
+
+		document.getElementById("tweetButton").onclick = function() {
+			tweets.push(document.getElementById("inputText").value);
+			console.log(tweets[tweets.length-1]);
+			alert("Neuer Tweet: < "+ tweets[tweets.length-1]+ " >");
+		}
+
+		console.log("Jetzt löschen wir das Element an 2. Stelle");
+		tweets.splice(1,1);
+		console.log(tweets);
+		console.log("Und Fügen dort ein neues ein");
+		tweets.splice(1,0, "Ich liebe Kafee über alles!");
+		console.log(tweets);
+		console.log("Jetzt drehen wir das Array um");
+		tweets.reverse();
+		console.log(tweets);
+		console.log("Jetzt erstellenw ir ein neues Array und fügen dort beide Arrays zusammen");
+		var joinedArray = tweets.join(myArray);
+		console.log(joinedArray);
+
+
+	</script>
+
+</body>
