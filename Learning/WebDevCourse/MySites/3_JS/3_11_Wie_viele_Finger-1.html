@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_11 Wie viele Finger</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+	<p>Wie viele Finger halte ich hoch?</p>
+
+	<p><input type="text" id="inputText"></p>
+
+	<p><button id="sendButton">Antwort senden!</button></p>
+
+	<script type="text/javascript">
+		var min = 0;
+		var max = 5;
+
+		var rounds = 0;
+
+		var finger = Math.floor(Math.random() * (max - min + 1)) + min;
+
+		document.getElementById('sendButton').onclick = function() {
+
+			rounds++;
+
+			var antwort = document.getElementById('inputText').value.toLowerCase();
+
+			if( finger == antwort )
+			{
+				alert("Richtig! Du hast " + rounds +" Versuche gebaucht. Wie viele Finger sind es jetzt?")
+				rounds = 0;
+				finger = Math.floor(Math.random() * (max - min + 1)) + min;
+				document.getElementById('inputText').value = "";
+			}
+			else
+			{
+				alert("Falsch! Versuche es doch gleich nochmal.")
+				document.getElementById('inputText').value = "";
+			}
+		}
+
+		
+	</script>
+
+</body>

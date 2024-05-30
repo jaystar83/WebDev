@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_10 If statements</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+	<p>Was ist das Zauberwort?</p>
+
+	<p><input type="text" id="inputText"></p>
+
+	<p><button id="sendButton">Send!</button></p>
+
+	<script type="text/javascript">
+
+		document.getElementById('sendButton').onclick = function() {
+
+			var eingabe = document.getElementById('inputText').value.toLowerCase();
+
+			var zauberwort = "abrakadabra";
+
+			if( eingabe == zauberwort )
+				alert("Richtig! Du bist ein mächtiger Zauberer!")
+			else
+				alert("Falsch! Ich verwadnle dich in einen Frosch!")
+		}
+
+	</script>
+
+</body>
