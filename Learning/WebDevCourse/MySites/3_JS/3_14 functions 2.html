@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 3_14 Funktionen</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+
+<body>
+
+	<p id="vorgabe"></p>
+	<p><input type="text" id="zahl"></input></p>
+	<p><button id="startButton">Lass den Computer raten!</button></p>
+
+
+	<script type="text/javascript">
+		var min = 0;
+		var max = 100;
+
+		document.getElementById("vorgabe").innerHTML = "Gib eine Zahl zwischen " + min + " und " + max + " ein!";
+
+		function durchschnitt(a, b)
+		{
+			return ( (a+b)/2 );
+		}
+
+		var x=41;
+		var y=43;
+
+//		alert( durchschnitt(x,y) );
+
+
+		function raten(richtigeAntwort, limMin, limMax)
+		{
+			var gerateneZahl = 0;	
+			var erfolg =  false; 
+			var rounds = 0;
+			while( !erfolg )
+			{
+				gerateneZahl = Math.floor(Math.random() * (limMax - limMin + 1)) + limMin;
+				erfolg = gerateneZahl == richtigeAntwort;
+				rounds++;
+			}
+
+			alert("Die Zahl ist "+ gerateneZahl + "! Der Computer hat " + rounds + " Versuche gebraucht. \r\n\r\nNoch eine Runde?");		
+		}
+		
+		///////////////////////////////////////////////////////////////////////////////////////////////
+		document.getElementById("startButton").onclick = function ()
+		{
+			var eingabe = document.getElementById("zahl").value;
+			var rounds = 1;
+
+			if( eingabe < min || eingabe > max || isNaN(eingabe) )
+			{
+				alert("Du musst eine Zahl zwischen "+ min +" und "+ max + " eingeben!");
+				document.getElementById("zahl").value = "";
+			}
+			else
+			{
+				raten(eingabe, min, max);
+
+				document.getElementById("zahl").value = "";
+			}		
+
+		}
+		
+	</script>
+
+</body>
