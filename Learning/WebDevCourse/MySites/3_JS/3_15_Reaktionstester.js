@@ -1,14 +1,15 @@
 var size_min = 50;
-var size_max = 250;
+var size_max = 200;
 
 var formColor_min = 0;
 var formColor_max = 220;
 
-var pgb_size = 450;
+var pgb_width = 600;
+var pgb_height = 290;
 var pgb_left_min = 10;    // links
-var pgb_left_max = pgb_left_min + pgb_size;   // rechts
+var pgb_left_max = pgb_left_min + pgb_width;   // rechts
 var pgb_top_min = 155;     // oben
-var pgb_top_max = pgb_top_min + pgb_size;//  + size_max;   // unten
+var pgb_top_max = pgb_top_min + pgb_height;//  + size_max;   // unten
 
 var startTime = new Date();
 // CODE, der gemessen werden soll
@@ -20,8 +21,8 @@ function setPlayground()
 	document.getElementById("playground").style.position = "absolute";
 	document.getElementById("playground").style.left = pgb_left_min-3+"px";
 	document.getElementById("playground").style.top = pgb_top_min-3+"px";
-	document.getElementById("playground").style.width = pgb_size+size_max+2+"px";
-	document.getElementById("playground").style.height = pgb_size+size_max+2+"px";
+	document.getElementById("playground").style.width = pgb_width+size_max+2+"px";
+	document.getElementById("playground").style.height = pgb_height+size_max+2+"px";
 	document.getElementById("playground").style.border = "2px black solid";
 }
 // random values    ////////////////////////////////////////////////////////////////////////
@@ -35,22 +36,37 @@ function setRandomNewForm()
 	var blue = Math.floor(Math.random() * (formColor_max - formColor_min + 1)) + formColor_min;
 	var yellow =  Math.floor(Math.random() * (formColor_max - formColor_min + 1)) + formColor_min;
 
+//	posiLeft = pgb_left_max;
+//	posiLeft = pgb_left_min;
+//	posiTop = pgb_top_max;
+//	posiTop = pgb_top_min;
+//	size = size_max;
+
 	var formColor = `rgb(${red},${blue},${yellow})`;
 
-	var look = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
-
+	var look = Math.random();
+	console.log(look);
 	// border around playground ////////////////////////////////////////////////////////////////
 	document.getElementById("formToClick").style.left = posiLeft+"px";
 	document.getElementById("formToClick").style.top = posiTop+"px";
 
 	document.getElementById("formToClick").style.width = size+"px";
 	document.getElementById("formToClick").style.height = size+"px";
-	if( look == 1)
-		document.getElementById("formToClick").style.borderRadius = (size/2)+"px";
+	if( look > 0.5)
+		document.getElementById("formToClick").style.borderRadius = "50%";
+	else
+		document.getElementById("formToClick").style.borderRadius = "0%";
 	document.getElementById("formToClick").style.backgroundColor = formColor;
 	document.getElementById("formToClick").style.position = "absolute";
 	document.getElementById("formToClick").style.left = posiLeft+"px";
 	document.getElementById("formToClick").style.top = posiTop+"px";
+	document.getElementById("formToClick").style.display = "block";
+}
+
+function restartTimeAndResetForm()
+{
+	setRandomNewForm();
+	startTime = new Date();
 }
 
 setPlayground();
@@ -59,32 +75,13 @@ setRandomNewForm();
 
 document.getElementById("formToClick").onclick = function ()
 {
-	setRandomNewForm();
-	// CODE, der gemessen werden soll
+	
 	var elapsedTime = new Date() - startTime;
-	// time is the number of milliseconds it takes to execute the script
-	startTime = new Date();
+	document.getElementById("formToClick").style.display = "none";
 	if(elapsedTime < minTime)
 		minTime = elapsedTime;
 	document.getElementById("elapsedTime").innerHTML = "Benötigte Zeit: " +	elapsedTime + "ms; Schnellste: " + minTime + "ms";
 
+	// time is the number of milliseconds it takes to execute the script
+	setTimeout(restartTimeAndResetForm, Math.random() * 2000);
 }
-
-
-
-
-//alert("formColor: " + formColor + "\r\n.style.backgroundColor: " + document.getElementById("formToClick").style.backgroundColor );
-/*
-var myLayer = document.createElement('div');
-myLayer.id = 'bookingLayer';
-myLayer.style.position = 'absolute';
-myLayer.style.left = '10px';
-myLayer.style.top = '10px';
-myLayer.style.width = '300px';
-myLayer.style.height = '300px';
-myLayer.style.padding = '10px';
-myLayer.style.background = '#00ff00';
-myLayer.innerHTML = 'This is the layer created by the JavaScript.';
-document.body.appendChild(myLayer);
-
-*/
