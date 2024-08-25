@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_03 jQuery Webinhalte verändern</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	
+		#kreis{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			border-radius: 50%;
+			margin: 10px;
+		}
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="kreis">
+	</div>
+
+	<iframe src="../2_CSS/2_15_Tagesschau.html" width="960" height="500"> </iframe>
+
+	<script type="text/javascript">
+	
+		if (typeof jQuery == "undefined")
+		{
+			alert("jQuery MISSING!");
+		}
+		
+		
+		$("#kreis").hover(function()
+		{
+			$("iframe").attr("src","../3_JS/3_15 Reaktionstester.html");
+	
+		});	
+		
+		
+	</script>
+
+</body>

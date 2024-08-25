@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_02 jQuery Click erkennen</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	
+		#kreis{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			border-radius: 50%;
+			margin: 10px;
+		}
+		
+		.quadrat{
+			width: 150px;
+			height: 150px;
+			background-color: blue;
+			margin: 10px;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+
+	<div id="kreis">
+	</div>
+	
+	<div class="quadrat" style="background-color: blue;">
+	</div>
+
+	<div class="quadrat" style="background-color: red;">
+	</div>
+
+	<script type="text/javascript">
+	
+		if (typeof jQuery == "undefined")
+		{
+			alert("jQuery MISSING!");
+		}
+		
+		/*
+		document.getElementById("kreis").onClick = function()
+		{
+			alert("Click on circle! Dedected via plain js");
+		}
+		*/
+		
+		$("#kreis").click(function()
+		{
+			alert("Click on circle! Dedected via jQuery");
+	
+		});	
+
+		
+		$(".quadrat").click(function()
+		{
+			alert("Click on square! Dedected via jQuery");
+	
+		});	
+
+	
+	</script>
+
+</body>

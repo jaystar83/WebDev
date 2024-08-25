@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_03 jQuery Webinhalte verändern</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	
+		#kreis{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			border-radius: 50%;
+			margin: 10px;
+		}
+				
+		.square{
+			width: 150px;
+			height: 150px;
+			margin: 10px;
+		}
+				
+	</style>
+
+</head>
+
+<body>
+
+	<div id="kreis">
+	</div>
+
+	<div class="square" style="background-color: red;">
+	</div>
+
+	<div class="square" style="background-color: blue;">
+	</div>
+
+
+	<script type="text/javascript">
+	
+		var big = false;
+	
+		if (typeof jQuery == "undefined")
+		{
+			alert("jQuery MISSING!");
+		}
+		
+		
+		$("#kreis").click(function()
+		{
+			big = !big;
+			if(big)
+			{
+				$("#kreis").css("width","400px");
+				$("#kreis").css("height","400px");
+			}
+			else
+			{
+				$("#kreis").css("width","150px");
+				$("#kreis").css("height","150px");
+			}
+		});	
+
+		$(".square").click(function()
+		{
+			$(this).css("display","none");
+		
+		});		
+		
+	</script>
+
+</body>
