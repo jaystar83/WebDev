@@ -19,12 +19,6 @@
 			margin: 10px;
 		}
 				
-		.square{
-			width: 150px;
-			height: 150px;
-			margin: 10px;
-		}
-				
 	</style>
 
 </head>
@@ -34,16 +28,9 @@
 	<div id="kreis">
 	</div>
 
-	<div class="square" style="background-color: red;">
-	</div>
-
-	<div class="square" style="background-color: blue;">
-	</div>
-
+	<iframe src="../2_CSS/2_15_Tagesschau.html" width="960" height="500"> </iframe>
 
 	<script type="text/javascript">
-	
-		var big = false;
 	
 		if (typeof jQuery == "undefined")
 		{
@@ -51,26 +38,12 @@
 		}
 		
 		
-		$("#kreis").click(function()
+		$("#kreis").hover(function()
 		{
-			big = !big;
-			if(big)
-			{
-				$("#kreis").css("width","400px");
-				$("#kreis").css("height","400px");
-			}
-			else
-			{
-				$("#kreis").css("width","150px");
-				$("#kreis").css("height","150px");
-			}
+			$("iframe").attr("src","../3_JS/3_15 Reaktionstester.html");
+	
 		});	
-
-		$(".square").click(function()
-		{
-			$(this).css("display","none");
 		
-		});		
 		
 	</script>
 
