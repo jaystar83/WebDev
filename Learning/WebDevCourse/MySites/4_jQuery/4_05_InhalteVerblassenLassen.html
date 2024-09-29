@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_05 Inhalte verblassen lassen</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	
+		#kreis{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			border-radius: 50%;
+			margin: 30px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<button id="toggle">Kreis togglen!
+	</button>
+
+	<div id="kreis">
+	</div>
+
+	<script>
+		var kreisVisable = true;
+
+		$("#toggle").click(function()
+		{
+			if(kreisVisable == true)
+			{
+				kreisVisable = false;
+				$("#kreis").fadeOut(2000);	// 2000ms
+			}
+			else
+			{	// da function erst nach dem fadeIn aufgerufen wird kann ich die variable erst nach dem der Kreis wieder sichtbar ist umschalten
+				$("#kreis").fadeIn(2000, function()	// 2000ms + function
+				{
+					kreisVisable = true;
+				});
+			}
+		});
+	
+	
+	</script>
+
+</body>
