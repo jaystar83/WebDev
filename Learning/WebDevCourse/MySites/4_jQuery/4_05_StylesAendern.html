@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>jQ - 4_03_2 jQuery Webinhalte Aendern</title>
+	<title>jQ - 4_05 StylesAendern</title>
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,6 +12,7 @@
 	<style type="text/css">
 	
 		#kreis{
+			float:left;
 			width: 150px;
 			height: 150px;
 			background-color: green;
@@ -24,6 +25,15 @@
 			height: 150px;
 			margin: 10px;
 		}
+
+		#resetButton{
+			float:left;
+			margin-left:50px;
+		}
+
+		.clear-float {
+ 		   clear: both;
+		}
 				
 	</style>
 
@@ -34,10 +44,17 @@
 	<div id="kreis">
 	</div>
 
-	<div class="square" style="background-color: red;">
+	<button id="resetButton">Reset
+	</button>
+
+	<div class="clear-float">
 	</div>
 
-	<div class="square" style="background-color: blue;">
+
+	<div class="square" id="squareRed" style="background-color: red;">
+	</div>
+
+	<div class="square" id="squareBlue" style="background-color: blue;">
 	</div>
 
 	<hr/>
@@ -76,10 +93,25 @@
 				}
 		});	
 
-		$(".square").click(function()
+
+		$(".square").hover(function()
 		{
-			$(this).css("display","none");
-		
+			$(this).css("background-color","yellow");
+		});
+
+		$("div").click(function()
+		{
+			if($(this).attr("id") == "square")
+			{
+				alert("Viereck wurde angegklickt!")
+			}
+			else
+			{
+				alert("Kreis wurde angegklickt!")
+
+			}
+
+			$(this).css("display","none");		
 		});		
 		
 		var changeSide = false;
@@ -98,6 +130,15 @@
 			}
 		});
 
+
+		$("#resetButton").click(function()
+		{
+			$("#kreis").css("display", "inline");
+			$(".square").css("display", "block");
+			$("#squareRed").css("background-color", "red");
+			$("#squareBlue").css("background-color", "blue");
+		});
+	
 	</script>
 
 </body>

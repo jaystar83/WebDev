@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_07 Animieren von Inhalten</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	
+		#kreis{
+			width: 150px;
+			height: 150px;
+			background-color: green;
+			border-radius: 50%;
+			margin: 30px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<button id="animationStartStop">Animation starten!
+	</button>
+
+	<div id="kreis">
+	</div>
+
+	<script type="text/javascript">
+
+		var animationActive = false;
+		var activated = false;
+		var animationInProgress = false;
+
+		$("#animationStartStop").click(function()
+		{	
+			if(animationActive == false && animationInProgress == false)
+			{
+				animationActive = true;
+				animationInProgress = true;
+			}
+			else 
+				animationActive = false;
+
+			kreisAnimation(animationActive);
+
+//			alert("animtationActiv: " + animationActive);
+
+		});
+
+
+//		kreisAnimation = function kreisAnimation(active)
+		function kreisAnimation(active)
+		{
+			var kreisDiaMin = "50px"
+			var kreisDiaDef = "150px"
+			var kreisDiaMax = "400px"
+
+			periode = 2000;
+
+			activated = active; 
+
+			if( activated == true )
+			{		
+				$("#animationStartStop").html("Animation stoppen!");
+				if(!activated)
+				{
+					kreisDiaMax = kreisDiaDef;
+					periode = 1;
+				}
+
+				$("#kreis").animate(
+					{width: kreisDiaMax, height: kreisDiaMax }, 
+					periode, 
+					function(){ 
+								if(!activated)
+								{
+									kreisDiaMin = kreisDiaDef;
+									periode = 1;
+								}
+								$("#kreis").animate({width: kreisDiaMin,height: kreisDiaMin	}, 
+													periode);
+
+								kreisAnimation(activated);
+					});
+			}
+			else if (animationInProgress = true)
+			{
+				$("#kreis").animate(
+						{width: kreisDiaDef, height: kreisDiaDef }, 
+						2000, function(){
+								$("#animationStartStop").html("Animation starten!");
+								animationInProgress = false;
+							  });
+
+				
+			}
+		
+//			alert("cyclesExpand: " + cyclesExpand + "\r\ncyclesShreek:" + cyclesShreek);
+						
+		}
+
+	</script>
+
+</body>
