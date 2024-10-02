@@ -18,6 +18,14 @@
 			border-radius: 50%;
 			margin: 30px;
 		}
+		#kreis_2{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+			border-radius: 50%;
+			margin-left: 30px;
+			margin-top: 50px;
+		}
 	</style>
 
 </head>
@@ -28,6 +36,9 @@
 	</button>
 
 	<div id="kreis">
+	</div>
+
+	<div id="kreis_2">
 	</div>
 
 	<script type="text/javascript">
@@ -47,9 +58,7 @@
 				animationActive = false;
 
 			kreisAnimation(animationActive);
-
 //			alert("animtationActiv: " + animationActive);
-
 		});
 
 
@@ -61,7 +70,6 @@
 			var kreisDiaMax = "400px"
 
 			periode = 2000;
-
 			activated = active; 
 
 			if( activated == true )
@@ -95,14 +103,27 @@
 						2000, function(){
 								$("#animationStartStop").html("Animation starten!");
 								animationInProgress = false;
-							  });
-
-				
+							  });			
 			}
 		
-//			alert("cyclesExpand: " + cyclesExpand + "\r\ncyclesShreek:" + cyclesShreek);
-						
+//			alert("cyclesExpand: " + cyclesExpand + "\r\ncyclesShreek:" + cyclesShreek);				
 		}
+
+		$("#kreis_2").click(function()
+		{
+			if($(this).css("margin-left")  != "100px")
+			{
+				$(this).animate({marginLeft: "100px", marginTop: "100px", width: "300px", height: "300px", borderRadius: "2%" }, 1000,
+								function(){$(this).css("background-color", "blue")}
+								);
+			}
+			else
+			{
+				$(this).animate({marginLeft: "30px", marginTop: "50px", width: "150px", height: "150px", borderRadius: "50%"}, 1000,
+								function(){$(this).css("background-color", "red")}
+								);
+			}
+		});
 
 	</script>
 
