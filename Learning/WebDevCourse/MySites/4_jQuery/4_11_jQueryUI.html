@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_11 jQuery UI</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!--jquery muss vor jqueryUI eingebunden werden -->
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<link href= "jQuery/jquery-ui-1.14.0/jquery-ui.css" rel="stylesheet">
+	<script src="jQuery/jquery-ui-1.14.0/jquery-ui.js"></script>
+
+	<style type="text/css">
+	
+	</style>
+
+</head>
+
+<body>
+
+	<div>
+		
+		<p><a href="https://api.jqueryui.com/"> Hier geht´s zu jQueryUI API Dokumentation </a> </p>
+
+	</div>
+
+	<div id="draggable">
+		<p>Zieh mich herum!</p>
+
+	</div>
+
+	<script type="text/javascript">
+		$( function() {
+ 			$( "#draggable" ).draggable();
+  			} 
+		);
+	</script>
+
+</body>
