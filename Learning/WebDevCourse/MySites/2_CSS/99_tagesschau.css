@@ -10,6 +10,7 @@ body{
 
 #tagesschauLogo{
 	content: url(images/tagesschauLogo.png);
+	float: left;
 	height: 44px;
 	position: relative;
 	top: 12px;
@@ -17,6 +18,20 @@ body{
 	//border-radius: 5px;
 		
 }
+
+
+#searchField{
+	float: right;
+	position: relative;
+	top: 20px;
+	margin-right: 10px;
+		/*left: -20px; */ 
+}
+#searchField input{
+	height: 20px;
+	
+}
+
 	
 #headerNaviLine{
 	background-color: none;
@@ -41,7 +56,7 @@ body{
 #headerNaviLine li{
 	list-style: none;
 	float: left;
-	//padding-left: 5px;
+	padding-left: 5px;
 
 }
 
@@ -50,7 +65,7 @@ body{
 	text-decoration: none;
 	font-size: 16px;
 	//		  oben rechts unten links
-	padding: 10px auto 10px auto;	// Abstand nach oben aber automatische ausrichtung bei rotation
+	padding: 10px 5px 10px 5px;	// Abstand nach oben aber automatische ausrichtung bei rotation
 	
 }
 
@@ -62,9 +77,11 @@ body{
 	padding: 5px 10px 5px 10px;	// macht, dass die Links vollständig über die gasmmte Leiste hervorgehoben werden
 }
 
-#searchField{
-	float: right;
+#ardLogoSmall{
+	content: url(images/ardLogo_2.jpg);
+	width: 70px;
 	position: relative;
-	top: 0px;
-		/*left: -20px; */ 
+	top: -8px;
 }
+
+
