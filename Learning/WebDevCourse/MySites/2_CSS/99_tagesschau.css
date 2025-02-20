@@ -29,6 +29,12 @@ body{
 }
 #searchField input{
 	height: 20px;
+	background-image: url(images/searchIcon.png);
+	background-repeat: no-repeat;
+	background-size: 22px;
+	background-position: right;
+	background
+	
 	
 }
 
@@ -81,7 +87,7 @@ body{
 	content: url(images/ardLogo_2.jpg);
 	width: 70px;
 	position: relative;
-	top: -8px;
+	top: -10px;
 }
 
 
