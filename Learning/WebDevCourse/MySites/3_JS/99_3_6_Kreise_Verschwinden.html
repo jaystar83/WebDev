@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>JS - 399_3_6_Kreise_Verschwinden.html</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<style type="text/css">
+		.kreis {
+		 	width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: relative;
+			float: left;
+			margin: 10px;
+		}
+
+		#rot {
+			background-color: red;
+		}
+		#gelb {
+			background-color: yellow;
+		}
+		#gruen {
+			background-color: green;
+		}
+		.clear-float {
+			clear: both;
+		}
+
+		#myButton {
+			position: absolute;
+			top: 120px;
+			margin: 15px;
+			width: 75px;
+			height: 50px;
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<div class="kreis" id="rot">
+
+	</div>
+
+	<div class="kreis" id="gelb">
+		
+	</div>
+
+	<div class="kreis" id="gruen">
+		
+	</div>
+
+	<div class="clear-float"></div>
+
+	<button id="myButton">Reset</button>
+
+	<script type="text/javascript">
+
+		document.getElementById("rot").onclick = function() {
+			document.getElementById("rot").style.display = "none";
+		}
+
+		document.getElementById("gelb").onclick = function() {
+			document.getElementById("gelb").style.display = "none";
+		}
+
+		document.getElementById("gruen").onclick = function() {
+			document.getElementById("gruen").style.display = "none";
+		}
+
+		document.getElementById("myButton").onclick = function() {
+			document.getElementById("rot").style.display = "block";
+			document.getElementById("gelb").style.display = "block";
+			document.getElementById("gruen").style.display = "block";
+		}
+
+
+	</script>
+
+</body>
