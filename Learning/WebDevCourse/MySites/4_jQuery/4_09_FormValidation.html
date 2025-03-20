@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQ - 4_09 Form Validierer</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+
+	<style type="text/css">
+	#wrapper{
+		width: 500px;
+		margin: 0 auto;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	input{
+		width: 180px;
+		height: 30px;
+		border-radius: 3px;
+		border-style: solid;
+		border-width: 3px;
+		border-color:dimgrey;
+		padding: 2px 5px 2px 5px;
+		font-size: 1.2em;
+	}
+	label{
+		font-size: 1.2em;
+		margin-right: 10px;
+		margin-top: 10px;
+		width: 150px;
+		float: left;
+	}
+
+	.clear-float {
+			clear: both;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		
+		<label for="email">E-Mail:</label>
+		<input name="email" type="text" placeholder="E-Mail" />
+		<div class="clear-float"></div>
+
+		<label for="password">Password:</label>
+		<input name="password" type="text" placeholder="Password" />
+		<div class="clear-float"></div>
+
+		<label for="passwordRepeat">Password repeat:</label>
+		<input name="passwordRepeat" type="text" placeholder="Password" />
+		<div class="clear-float"></div>
+	</div>
+
+	
+
+	<button id="animationStartStop">Animation starten!
+	</button>
+
+	<div id="kreis">
+	</div>
+
+	<div id="kreis_2">
+	</div>
+
+	<script type="text/javascript">
+
+		var animationActive = false;
+		var activated = false;
+		var animationInProgress = false;
+
+		$("#animationStartStop").click(function()
+		{	
+			if(animationActive == false && animationInProgress == false)
+			{
+				animationActive = true;
+				animationInProgress = true;
+			}
+			else 
+				animationActive = false;
+
+			kreisAnimation(animationActive);
+//			alert("animtationActiv: " + animationActive);
+		});
+
+
+//		kreisAnimation = function kreisAnimation(active)
+		function kreisAnimation(active)
+		{
+			var kreisDiaMin = "50px"
+			var kreisDiaDef = "150px"
+			var kreisDiaMax = "400px"
+
+			periode = 2000;
+			activated = active; 
+
+			if( activated == true )
+			{		
+				$("#animationStartStop").html("Animation stoppen!");
+				if(!activated)
+				{
+					kreisDiaMax = kreisDiaDef;
+					periode = 1;
+				}
+
+				$("#kreis").animate(
+					{width: kreisDiaMax, height: kreisDiaMax }, 
+					periode, 
+					function(){ 
+								if(!activated)
+								{
+									kreisDiaMin = kreisDiaDef;
+									periode = 1;
+								}
+								$("#kreis").animate({width: kreisDiaMin,height: kreisDiaMin	}, 
+													periode);
+
+								kreisAnimation(activated);
+					});
+			}
+			else if (animationInProgress = true)
+			{
+				$("#kreis").animate(
+						{width: kreisDiaDef, height: kreisDiaDef }, 
+						2000, function(){
+								$("#animationStartStop").html("Animation starten!");
+								animationInProgress = false;
+							  });			
+			}
+		
+//			alert("cyclesExpand: " + cyclesExpand + "\r\ncyclesShreek:" + cyclesShreek);				
+		}
+
+		$("#kreis_2").click(function()
+		{
+			if($(this).css("margin-left")  != "100px")
+			{
+				$(this).animate({marginLeft: "100px", marginTop: "100px", width: "300px", height: "300px", borderRadius: "2%" }, 1000,
+								function(){$(this).css("background-color", "blue")}
+								);
+			}
+			else
+			{
+				$(this).animate({marginLeft: "30px", marginTop: "50px", width: "150px", height: "150px", borderRadius: "50%"}, 1000,
+								function(){$(this).css("background-color", "red")}
+								);
+			}
+		});
+
+	</script>
+
+</body>
