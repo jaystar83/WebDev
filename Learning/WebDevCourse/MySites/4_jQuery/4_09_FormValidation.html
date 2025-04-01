@@ -9,6 +9,7 @@
 
 	<script src="jQuery/jquery-3.7.1.min.js"></script>
 
+
 	<style type="text/css">
 	#wrapper{
 		width: 500px;
@@ -24,6 +25,7 @@
 		border-color:dimgrey;
 		padding: 2px 5px 2px 5px;
 		font-size: 1.2em;
+		margin-bottom: 5px;
 	}
 	label{
 		font-size: 1.2em;
@@ -33,6 +35,18 @@
 		float: left;
 	}
 
+	#sendButton{
+		font-size: 1.2em;
+		width: 120px;
+		height: 50px;
+		border-radius: 3px;
+		border-style: solid;
+		border-width: 3px;
+		border-color:dimgrey;
+		padding: 2px 5px 2px 5px;
+		margin-left: 160px;
+	}
+	
 	.clear-float {
 			clear: both;
 		}
@@ -44,32 +58,66 @@
 <body>
 
 	<div id="wrapper">
+		<form id="validationForm">
+			<label for="email">E-Mail:</label>
+			<input id="email" name="email" type="text" placeholder="E-Mail" />
+			<div class="clear-float"></div>
 		
-		<label for="email">E-Mail:</label>
-		<input name="email" type="text" placeholder="E-Mail" />
-		<div class="clear-float"></div>
+			
+			<label for="phone">Phone No.:</label>
+			<input name="phone" type="text" placeholder="+49 " />
+			<div class="clear-float"></div>
+	
+			<label for="password">Password:</label>
+			<input name="password" type="password" placeholder="Password" />
+			<div class="clear-float"></div>
 
-		<label for="password">Password:</label>
-		<input name="password" type="text" placeholder="Password" />
-		<div class="clear-float"></div>
-
-		<label for="passwordRepeat">Password repeat:</label>
-		<input name="passwordRepeat" type="text" placeholder="Password" />
-		<div class="clear-float"></div>
+			<label for="passwordRepeat">Password repeat:</label>
+			<input name="passwordRepeat" type="password" placeholder="Password" />
+			<div class="clear-float"></div>
+		
+			<input id="sendButton" type="submit" value="Confirm"/>
+			<div class="clear-float"></div>
+		</form>
 	</div>
 
 	
+	<script type="text/javascript" src="4_09_FormValidation.js"></script>
+	<!-- -->
+	<script type="text/javascript">
+				alert("test alert");
 
-	<button id="animationStartStop">Animation starten!
-	</button>
+		function validateEmail_1($email) {
+  			var emailReg = new RegEx(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/);
+  			return emailReg.test( $email );
+		}
+		
+		function validateEmail_2(email) {
+ 			var regex = new RegEx(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/);
+  			return regex.test(email);
+		}
+	
+			
+		$("#validationForm").submit(function(event){
+			// Funktion hält Form davon ab übergeben zu werden
+			alert("test_yy")
+			event.preventDefault();
+			
+			alert( validateEmail_1( $("#email").val() )
+			alert( validateEmail_2( $("#email").val() )
+			
+			if( $(validateEmail_1( $("#email").val() ) ) )
+				alert("test_1");
+			else
+				alert("tes_2")
+	
+		});
 
-	<div id="kreis">
-	</div>
-
-	<div id="kreis_2">
-	</div>
+	</script>
+	<!-- -->
 
 	<script type="text/javascript">
+		//alert("test_1")
 
 		var animationActive = false;
 		var activated = false;
